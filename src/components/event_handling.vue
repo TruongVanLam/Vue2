@@ -1,20 +1,32 @@
 <script>
 export default {
+    data() {
+        return {
+            counter: 0
+        }
+    },
     methods: {
         warn(message, event) {
             if (event)
                 console.log(event.target.tagName);
             alert(message)
         },
-        handleScroll() {
-            alert('Ban dang cuon trang')
+        handleCounter() {
+            return this.counter += 1
         }
     }
 }
 </script>
 
 <template>
-    <div @scroll.passive="handleScroll()">
-        <button @click.once="warn('Hello', $event)">Click me</button>
+    <div>
+        <div>
+            <h2>EventHandling</h2>
+            <button @click="warn('Hello', $event)">Alert</button><br><br>
+        </div>
+        <div>
+            <button @click="handleCounter()">Đếm cừu</button>
+            <p>{{ counter }} con cừu</p>
+        </div>
     </div>
 </template>

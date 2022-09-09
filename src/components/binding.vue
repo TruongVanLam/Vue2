@@ -21,6 +21,7 @@ export default {
 
 <template>
     <div>
+        <h2>Binding</h2>
         <!-- text -->
         <span>Thong diep 1 dong:</span><br />
         <input v-model="message" placeholder="Hay nhap..." />
@@ -30,12 +31,12 @@ export default {
         <p style="white-space: pre-line;"> Thong diep da nhap: {{ text }}</p>
 
         <!-- checkbox -->
-        <h2>Checkbox</h2>
+        <h3>Checkbox</h3>
         <input type="checkbox" id="checkbox" v-model="checked" />
         <label for="checkbox">{{ checked }}</label>
 
         <!-- multi checkbox -->
-        <h2>Multi checkbox</h2>
+        <h3>Multi checkbox</h3>
         <div>
             <input type="checkbox" id="com-chien-toi" value="Cơm chiên tỏi" v-model="checkedNames">
             <label for="com-chien-toi">Cơm chiên tỏi</label><br>
@@ -48,7 +49,7 @@ export default {
         </div>
 
         <!-- Radio -->
-        <h2>Radio</h2>
+        <h3>Radio</h3>
         <input type="radio" id="cac-mon-rau" value="Các món rau" v-model="radioCheck" />
         <label for="cac-mon-rau">Các món rau</label><br>
         <input type="radio" id="cac-mon-thit" value="Các món thịt" v-model="radioCheck" />
@@ -56,7 +57,7 @@ export default {
         <span>Đã chọn: {{ radioCheck }}</span>
 
         <!-- Select -->
-        <h2>Single select</h2>
+        <h3>Single select</h3>
         <div>Món đã chọn: {{ selected }}</div>
         <select v-model="selected">
             <option disabled value="">Vui lòng chọn món</option>
@@ -65,7 +66,7 @@ export default {
             <option>Mì</option>
         </select>
 
-        <h2>Multiple select</h2>
+        <h3>Multiple select</h3>
         <div>Các món đã chọn: {{ multiSelected }}</div>
         <select v-model="multiSelected" multiple>
             <option>Cơm rang</option>
@@ -73,7 +74,7 @@ export default {
             <option>Mì</option>
         </select>
 
-        <h2>Render <code style="color: red;">option</code> với <code style="color: red;">v-for</code></h2>
+        <h3>Render <code style="color: red;">option</code> với <code style="color: red;">v-for</code></h3>
         <select v-model="selected">
             <option v-for="option in options" :value="option.value">{{ option.text }}</option>
         </select>
