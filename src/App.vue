@@ -7,8 +7,10 @@ import Emit from './components/emit.vue'
 import ForceUpdate from './components/force_update.vue'
 import NextTick from './components/next_tick.vue'
 import SlotCustom from './components/slot_custom.vue'
+import Composables from './components/composables.vue'
+
 export default {
-    components: { Todo, EventHandling, Binding, Props, Emit, ForceUpdate, NextTick, SlotCustom },
+    components: { Todo, EventHandling, Binding, Props, Emit, ForceUpdate, NextTick, SlotCustom, Composables },
     data() {
         return {
             currentTab: 'todo',
@@ -61,6 +63,8 @@ export default {
             </div>
             <p slot="footer">Here's some contact info</p>
         </slot-custom>
+
+        <composables></composables>
     </div>
 </template>
 
